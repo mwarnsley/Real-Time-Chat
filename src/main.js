@@ -4,7 +4,12 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import moment from 'moment';
+import VueChatScroll from 'vue-chat-scroll';
 
+// Setting up the vue use for the resources used in the app
+Vue.use(VueChatScroll);
+
+// Setting up the filter for the timestamp
 Vue.filter('timestamp', value => {
   return moment(value).format('MMMM Do YYYY, h:mm:ss a');
 });
